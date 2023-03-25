@@ -1,0 +1,139 @@
+@media (max-width:1024px){
+    header{
+        padding: 0px;
+        padding-left: 0px;
+        width: 97%;
+        justify-self: center;
+        span a img{
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+        nav div{ 
+            width: auto;
+        }
+    }
+    .menu-items{
+        gap: 35px;
+        li{
+            margin-bottom: 1rem;
+        }
+        a{
+            font-size: 0.7em;
+            padding-left: 15px;
+            }
+        }
+    .grid-container-home {
+        main{ 
+            h1{
+                font-size: 85px;
+            }
+            article{
+                font-size: 36px;
+                font-weight: bold;
+                padding-bottom: 30px;
+            }
+            a{
+                font-size: 29px;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }   
+    }
+    .grid-container-about{
+        padding: 0px 0px 0px 0px;
+        main{
+            grid-template-columns: auto;
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas:
+            "about-section"
+            "about-photo";
+            padding: 10px 30px 30px 30px;
+            gap: 30px;
+            section{
+                h1{
+                    font-size: 2em;
+                }
+                p{
+                    padding-top: 15px;
+                    font-size: 1.1em;
+                }
+            }
+            div{
+                align-items: center;
+            } 
+            img{
+                width: 95%;
+            }   
+        }
+    }
+    .grid-container-shop{
+        padding: 0px 0px 0px 0px;
+        main{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas:
+            "title-page title-page"
+            "shop-section shop-section";
+            padding: 10px 30px 30px 30px;
+            gap: 30px;
+            h1{
+                font-size: 2em;
+                }
+            section{
+                grid-template-areas:
+                "shop-card shop-card";
+                div{
+                    padding-bottom: 80px;
+                    img{
+                        width: 95%;
+                    }
+                    p{
+                        width: 95%;
+                        font-size: 1.1em;
+                    }
+                    a{
+                        @include shop-now-button (1.1em,5px);
+                        &:hover{
+                            transform: scale(1.06);
+                        }
+                    }
+                }
+            }   
+        }
+    }
+    .grid-container-blog{
+        padding: 0px 0px 0px 0px;
+        main{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas:
+            "title-page title-page"
+            "blog-section blog-section";
+            padding: 10px 30px 30px 30px;
+            h1{
+                font-size: 2em;
+            }
+            section{
+                grid-template-areas:
+                "blog-card blog-card";
+                gap: 30px;
+                article{
+                    p{
+                        font-size: 1.1em;
+                    }
+                    a{
+                        @include shop-now-button(1.1em,5px)
+                    }
+                }
+            }
+        }
+    }
+    .grid-container-locations{
+        padding: 0px 0px 0px 0px;
+        main{
+            padding: 10px 30px 30px 30px;
+            h1{
+                @include title(2em);
+            }
+        }
+    }
+}

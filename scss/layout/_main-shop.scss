@@ -1,0 +1,48 @@
+.grid-container-shop{
+    @include layout-noindex;
+    @include background-no-image;
+    main{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas:
+        "title-page title-page title-page"
+        "shop-section shop-section shop-section";
+        justify-content: center;
+        padding: 10px 30px 30px 30px;
+        gap: 40px;
+        h1{
+            @include title(2.5em);
+            }
+        section{
+            grid-area: shop-section;
+            display: grid;
+            grid-template-areas:
+            "shop-card shop-card shop-card"
+            "shop-card shop-card shop-card";
+            flex-wrap: nowrap;
+            div{
+                @include card (50px);
+                justify-content: center;
+                padding-top: 0px;
+                img{
+                    width: 29vi;
+                }
+                p{
+                    width: 90%;
+                    padding-top: 10px;
+                    padding-bottom: 0px;
+                    font-size: 1.2em;
+                    color: $font-color;
+                    font-family: 'Lora', serif;
+                    text-align: center;
+                }
+                a{
+                    @include shop-now-button (25px,5px);
+                        &:hover{
+                            transform: scale(1.08);
+                        }
+                    }
+                }
+            }
+        }   
+    }
